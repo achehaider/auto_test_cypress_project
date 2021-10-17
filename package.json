@@ -1,0 +1,37 @@
+{
+  "name": "hiboo-frontend-auto-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "devDependencies": {
+    "@types/node": "^16.11.1",
+    "cypress": "^8.6.0",
+    "cypress-xpath": "^1.6.2",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:record": "cypress run --record",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:record:chrome": "cypress run --record --browser chrome",
+    "cy:run:record:parallel": "cypress run --record --parallel",
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "cy:version": "cypress version",
+    "cy:cache:list": "cypress cache list",
+    "start": "serve --listen ${PORT:-8080}",
+    "start:ci": "serve --no-clipboard --listen ${PORT:-8080}",
+    "start:ci:windows": "serve --no-clipboard --listen 8080",
+    "local:open": "start-test 8080 cy:open",
+    "local:run": "start-test 8080 cy:run",
+    "local:run:record": "start-test 8080 cy:run:record",
+    "ci:set-port": "node ./scripts/set-port",
+    "test:ci:chrome": "run-p --race start:ci cy:run:chrome",
+    "test:ci:record": "run-p --race start:ci cy:run:record"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/achehaider/auto_test_cypress_project.git"
+  }
+}
