@@ -12,8 +12,8 @@ jobs:
         uses: cypress-io/github-action@v2.9.7
         timeout-minutes: 10
         with:
-          build: npm run build
-          start: npm start
+          build: yarn run build
+          start: yarn start
           browser: chrome
           headless: true
           record: true
