@@ -8,8 +8,6 @@ describe('Goto Hiboo homepage from google search', () => {
   it('Google Search',() => {
       cy.googleSearch('hiboo.io', testData.urlHibouHomePage).click()
   });
-
-  //cy.fixture('dataset').then(urlHibouHomePage)
   
   it('Verify Hiboo Home page',() => {
     cy.url().should('eq', testData.urlHibouHomePage+'/')
