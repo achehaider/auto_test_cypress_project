@@ -19,19 +19,14 @@
     "cy:verify": "cypress verify",
     "cy:info": "cypress info",
     "cy:version": "cypress version",
-    "cy:cache:list": "cypress cache list",
-    "start": "serve --listen ${PORT:-8080}",
-    "start:ci": "serve --no-clipboard --listen ${PORT:-8080}",
-    "start:ci:windows": "serve --no-clipboard --listen 8080",
-    "local:open": "start-test 8080 cy:open",
-    "local:run": "start-test 8080 cy:run",
-    "local:run:record": "start-test 8080 cy:run:record",
-    "ci:set-port": "node ./scripts/set-port",
-    "test:ci:chrome": "run-p --race start:ci cy:run:chrome",
-    "test:ci:record": "run-p --race start:ci cy:run:record"
+    "cy:cache:list": "cypress cache list"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/achehaider/auto_test_cypress_project.git"
+  },
+  "dependencies": {
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha-junit-reporter": "^2.0.2"
   }
 }
