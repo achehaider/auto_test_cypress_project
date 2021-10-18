@@ -7,6 +7,7 @@ const testData = require("../../fixtures/dataset.json");
 describe('Goto Hiboo homepage from google search', () => {
   it('Google Search',() => {
       cy.googleSearch('hiboo.io', testData.urlHibouHomePage).click()
+      cy.wait(1000)
   });
   
   it('Verify Hiboo Home page',() => {
