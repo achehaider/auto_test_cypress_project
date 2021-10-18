@@ -10,7 +10,7 @@ describe('Goto Hiboo homepage from google search', () => {
   });
   
   it('Verify Hiboo Home page',() => {
-    cy.url().should('eq', testData.urlHibouHomePage+'/')
+    //cy.url().should('eq', testData.urlHibouHomePage+'/')
 
     //Verify the Hiboo logo
     cy.get(hibooHomeElements.imgLogoHiboo).should('be.visible')
