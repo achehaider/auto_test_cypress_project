@@ -29,8 +29,12 @@ import { googleSearchElements } from "../support/webElementsRepo/google.search";
 
 Cypress.Commands.add('googleSearch', (searchText, expectedUrl) => {
     cy.visit('https://www.google.com')
-    //Click Accept button
-    cy.get(googleSearchElements.btnAccept).click()
+    //Click Accept button if exist
+    cy.get('.J2ipb').then( ($btnGoogleAccept) => {
+      if ($btnGoogleAccept.find(googleSearchElements.btnAccept).length > 0) {
+        cy.get(googleSearchElements.btnAccept).click()
+      }
+    })
     //Type the text to search
     cy.get(googleSearchElements.inputSearchField).first().type(searchText).type('{enter}')
     //cy.get('input[name="btnK"]').first()
