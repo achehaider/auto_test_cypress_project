@@ -20,12 +20,6 @@ import './commands'
 // require('./commands')
 require('cypress-xpath')
 
-beforeEach(() => {
-  cy.log("Test case Started");
-});
 
-afterEach(() => {
-  cy.log("Test case Completed");
-});
 
   
