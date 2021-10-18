@@ -7,6 +7,9 @@
     "@types/node": "^16.11.1",
     "cypress": "^8.6.0",
     "cypress-xpath": "^1.6.2",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
     "typescript": "^4.4.4"
   },
   "scripts": {
@@ -16,7 +19,7 @@
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:record:chrome": "cypress run --record --browser chrome",
     "cy:run:record:parallel": "cypress run --record --parallel",
-    "cy:run:report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
+    "cy:run:report": "cypress run --browser chrome --reporter mochawesome",
     "cy:verify": "cypress verify",
     "cy:info": "cypress info",
     "cy:version": "cypress version",

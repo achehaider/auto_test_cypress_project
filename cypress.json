@@ -5,8 +5,13 @@
     "supportFile": "cypress/support/index.ts",
     "testFiles": "**/**/*.spec.ts",
     "projectId": "8zfjk9",
-    "reporter": "cypress-multi-reporters",
+    "reporter": "mochawesome",
     "reporterOptions": {
-      "configFile": "reporter-config.json"
+      "charts": true,  
+      "reportDir": "cypress/results",
+      "reportFilename": "report",
+      "overwrite": false,
+      "html": true,
+      "json": false
     }
 }
