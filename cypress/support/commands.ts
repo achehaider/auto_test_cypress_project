@@ -28,22 +28,22 @@ import { googleSearchElements } from "../support/webElementsRepo/google.search";
 
 
 Cypress.Commands.add('googleSearch', (searchText, expectedUrl) => {
-    cy.visit('https://www.google.com')
+    cy.visit('https://www.google.com');
     //Click Accept button if exist
 
     cy.get('body').then( ($body) => {
       if ($body.find('.J2ipb').length > 0) {
         if ($body.find(googleSearchElements.btnAccept).length > 0) {
-          cy.get(googleSearchElements.btnAccept).click()
+          cy.get(googleSearchElements.btnAccept).click();
         }
       }
     })
     //Type the text to search
-    cy.get(googleSearchElements.inputSearchField).first().type(searchText).type('{enter}')
+    cy.get(googleSearchElements.inputSearchField).first().type(searchText).type('{enter}');
     //cy.get('input[name="btnK"]').first()
     //Check search results and verify that the expected result is visible
-    cy.get(googleSearchElements.headerFirstResultTitle).first().should('be.visible')
-    cy.get(googleSearchElements.divFirstResult).first().should('have.text', expectedUrl)
-    return cy.get(googleSearchElements.divFirstResult).first()
+    cy.get(googleSearchElements.headerFirstResultTitle).first().should('be.visible');
+    cy.get(googleSearchElements.divFirstResult).first().should('have.text', expectedUrl);
+    return cy.get(googleSearchElements.divFirstResult).first();
   })
   
