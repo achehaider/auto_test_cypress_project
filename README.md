@@ -9,3 +9,4 @@
 * **Run and record**   : ```yarn cy:run:record```
 * **Run on chrome and record** : ```yarn cy:run:record:chrome```
 * **Run and generate a JUnit report** : ```yarn cy:run:report```
+*
